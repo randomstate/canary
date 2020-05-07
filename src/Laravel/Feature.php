@@ -4,6 +4,7 @@
 namespace RandomState\Canary\Laravel;
 
 
+use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /*
@@ -13,11 +14,6 @@ use Illuminate\Database\Eloquent\Model;
 class Feature extends Model
 {
     public $incrementing = false;
-
-    public function featureables()
-    {
-        return $this->morphTo();
-    }
 
     public static function named($name)
     {
@@ -34,9 +30,21 @@ class Feature extends Model
             ->exists();    
     }
     
+    public function scopeAvailable(Builder $query)
+    {
+        return $query->where('available', true);
+    }
+    
     public function enable() 
     {
         $this->enabled = true;
+        
+        return $this;
+    }
+    
+    public function disable()
+    {
+        $this->enabled = false;
         
         return $this;
     }

@@ -11,6 +11,7 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->boolean('available')->default(true);
             $table->boolean('enabled')->default(false);
             $table->timestamps();
         });

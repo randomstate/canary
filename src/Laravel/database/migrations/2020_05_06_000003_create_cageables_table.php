@@ -9,7 +9,6 @@ class CreateCageablesTable extends Migration
     public function up()
     {
         Schema::create('cageables', function (Blueprint $table) {
-            // $table->bigIncrements('id');
             $table->unsignedBigInteger('cage_id');
             $table->unsignedBigInteger('item_id');
             $table->string('item_type');

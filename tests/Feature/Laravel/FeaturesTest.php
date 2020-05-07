@@ -9,15 +9,7 @@ use RandomState\Canary\Laravel\Feature;
 
 class FeaturesTest extends TestCase
 {
-    protected $manager;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->manager = new FeatureManager;
-    }
-
+    
     /**
      * @test
      */

@@ -14,17 +14,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CanaryTest extends TestCase
 {
-    use DatabaseMigrations;
-
-    protected $manager;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->manager = new FeatureManager;
-    }
-
     /**
      * @test
      */

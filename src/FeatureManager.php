@@ -3,7 +3,9 @@
 
 namespace RandomState\Canary;
 
-
+use Illuminate\Support\Facades\Gate;
+use RandomState\Canary\Laravel\Cage;
+use RandomState\Canary\Laravel\Featureable;
 use RandomState\Canary\Repositories\ArrayRepository;
 
 class FeatureManager
@@ -15,7 +17,7 @@ class FeatureManager
 
     public function __construct(FeatureRepository $repository = null)
     {
-        if(!$repository) {
+        if (!$repository) {
             $repository = new ArrayRepository;
         }
 

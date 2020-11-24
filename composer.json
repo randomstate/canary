@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "staudenmeir/eloquent-has-many-deep": "^1.7"
+        "staudenmeir/eloquent-has-many-deep": "^1.7",
+        "doctrine/dbal": "^2.12"
     },
     "require-dev": {
       "phpunit/phpunit": "^9.1",

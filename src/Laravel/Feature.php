@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 class Feature extends Model
 {
     public $incrementing = false;
+    protected $keyType = 'string';
 
     public static function named($name)
     {

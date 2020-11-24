@@ -5,12 +5,9 @@ namespace RandomState\Canary\Tests\Feature\Laravel;
 
 
 use RandomState\Canary\Laravel\Cage;
-use RandomState\Canary\FeatureManager;
 use RandomState\Canary\Tests\TestCase;
 use RandomState\Canary\Laravel\Feature;
-use RandomState\Canary\Laravel\Cageable;
 use RandomState\Canary\Tests\fixtures\Entity;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CanaryTest extends TestCase
 {
